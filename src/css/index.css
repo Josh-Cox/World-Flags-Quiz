@@ -1,0 +1,39 @@
+body {
+    background-color: #3b3b3b;
+}
+
+div.login {
+    margin: auto;
+    text-align: center;
+}
+
+.login h1 {
+    color: white;
+}
+
+div.login{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 300px;
+    padding: 10px;
+    line-height: 30px;
+    outline: 4px solid white;
+    border-radius: 10px;
+}
+
+div.login a {
+    color: white;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 5px;
+    text-decoration: none;
+}
+
+div.login p {
+    line-height: 20px;
+    padding-top: 10px;
+    margin: 0;
+}
+

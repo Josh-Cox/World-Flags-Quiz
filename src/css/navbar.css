@@ -1,0 +1,106 @@
+body {
+    margin-top: 30px;
+}
+
+nav {
+    text-align: center;
+    height: 35px;
+    list-style-type: none;
+    padding-top: 15px;
+    width: 800px;
+    margin: auto;
+    border-radius: 100px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a[name=home] {
+    width: 1cm;
+}
+
+nav li a[name=quiz] {
+    width: 0.8cm;
+}
+
+nav li a[name=leaderboard] {
+
+}
+
+nav li a {
+    float: left;
+    height: 0.7cm;
+    width: 2cm;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+
+}
+
+nav li a:before,
+nav li a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: #ff0069;
+  transition: 0.3s;
+}
+
+nav li a[name=home]:after {
+    left: 5px;
+    bottom: 0px;
+}
+
+nav li a[name=leaderboard]:after {
+    left: 5px;
+    bottom: 0px;
+}
+
+nav li a[name=quiz]:after {
+    left: 5px;
+    bottom: 0px;
+}
+
+nav li a[name=home]:before {
+    right: -15px;
+    top: -4px;
+}
+
+nav li a[name=leaderboard]:before {
+    right: -40px;
+    top: -4px;
+}
+
+nav li a[name=quiz]:before {
+    right: -10px;
+    top: -4px;
+}
+
+nav li a:hover {
+    color: #ff0069;
+}
+
+nav li a[name=home]:hover:after,
+nav li a[name=home]:hover:before {
+    width: 68px;
+}
+
+nav li a[name=leaderboard]:hover:after,
+nav li a[name=leaderboard]:hover:before {
+    width: 130px;
+}
+
+nav li a[name=quiz]:hover:after,
+nav li a[name=quiz]:hover:before {
+    width: 55px;
+}
