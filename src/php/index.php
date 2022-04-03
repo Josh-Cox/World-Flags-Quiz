@@ -67,15 +67,15 @@
                     <?php
                 }
                 else { ?>
-                    <div class="login">
                         <h1>Login Form</h1>
-                        <form action="includes/login.inc.php" method="post">
-                            <input type="text" name="uName" placeholder="Username">
-                            <input type="password" name="pwd" placeholder="Password">
-                            <button type="submit" name="submit">Login</button><br>
-                            <p><a href="./php/register.php">Dont have a user account? Register now</a></p>
-                        </form>
-                    </div>
+                        <div class="loginForm">
+                            <form action="includes/login.inc.php" method="post">
+                                <input type="text" name="uName" placeholder="Username">
+                                <input type="password" name="pwd" placeholder="Password">
+                                <button type="submit" name="submit">Login</button><br>
+                                <p><a href="./php/register.php">Dont have a user account? Register now</a></p>
+                            </form>
+                        </div>
                     <?php
                         if (isset($_GET["error"])) {
 
