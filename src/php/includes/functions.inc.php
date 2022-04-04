@@ -52,7 +52,7 @@ function userNameTaken($conn, $userName) {
 
 function createUser($conn, $firstName, $lastName, $userName, $pwd, $display) {
 
-    $sql = 'INSERT INTO Users (UserName, FirstName, LastName, Password, Display) VALUES (?, ?, ?, ?, ?)';
+    $sql = 'INSERT INTO Users (Username, FirstName, LastName, Password, Display) VALUES (?, ?, ?, ?, ?)';
     $prepStatement = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($prepStatement, $sql)) {
@@ -66,7 +66,7 @@ function createUser($conn, $firstName, $lastName, $userName, $pwd, $display) {
     mysqli_stmt_execute($prepStatement);
     mysqli_stmt_close($prepStatement);
 
-    header("location: ../src/index.php?error=None");
+    header("location: ../php/index.php?error=None");
     exit();
 }
 
@@ -100,7 +100,7 @@ function loginUser($conn, $userName, $pwd) {
 
     else if ($pwdCheck == true) {
         session_start();
-        $_SESSION["userName"] = $userExists["UserName"];
+        $_SESSION["userName"] = $userExists["Username"];
         
         header("location: ../index.php");
         exit();

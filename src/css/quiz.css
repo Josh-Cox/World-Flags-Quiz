@@ -1,3 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
+
 body {
-    background-color: #3b3b3b;
+    background: linear-gradient(to bottom right, #2d294f 0%, #4b4b4b 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 99%;
+}
+
+.main {
+    padding-top: 1px;
+    width: 230px;
+    height: 250px;
+    margin-top: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.main h1 {
+    color: rgb(255, 255, 255, 0.7);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #23203b;
 }

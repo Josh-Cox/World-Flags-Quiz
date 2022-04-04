@@ -1,9 +1,9 @@
 <?php
 
 $serverName = "localhost";
-$dbUsername = "coursework";
-$dbPassword = "courseworkwebdev";
-$dbName = "tetris";
+$dbUsername = "Valix";
+$dbPassword = "Slowcheetah7rhcp";
+$dbName = "quiz";
 $port = 1111;
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName, $port);

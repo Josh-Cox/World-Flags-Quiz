@@ -13,7 +13,7 @@ body {
     padding-top: 1px;
     width: 230px;
     height: 250px;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -30,7 +30,7 @@ body {
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 40px;
     background: #27AE60;
     border: none;
     font-size: 1.6em;
@@ -66,14 +66,11 @@ input {
     border-left: none;
     border-right: none;
     border-top: 1px solid rgb(255, 255, 255, 0.1);
-}
-
-input[name=pwd] {
-    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
-}
-
-input[name=uName] {
     border-bottom: none;
+}
+
+input[name=cPwd] {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
 }
 
 .main i {
@@ -81,15 +78,32 @@ input[name=uName] {
     color: rgb(255, 255, 255, 0.2);
 }
 
-#user-icon {
-    top: 318px;
+#fName-icon {
+    top: 269px;
+    left: 670px;
+}
+
+#lName-icon {
+    top: 310px;
+    left: 670px;
+}
+
+#userName-icon {
+    top: 350px;
     left: 670px;
 }
 
 #pwd-icon {
-    top: 360px;
+    top: 392px;
     left: 670px;
 }
+
+#cPwd-icon {
+    top: 433px;
+    left: 670px;
+}
+
+
 
 a {
     color: rgb(255, 255, 255, 0.7);
@@ -102,4 +116,43 @@ a:hover {
 
 #error {
     color: rgba(255, 113, 113);
+}
+
+/** 
+* Radio Buttons
+*/
+
+p {
+    color: rgb(255, 255, 255, 0.7);
+}
+  
+form input[name=display] {
+position: absolute !important;
+clip: rect(0, 0, 0, 0);
+height: 1px;
+width: 1px;
+background: rgb(255, 255, 255, 0);
+}
+
+label {
+background: rgb(255, 255, 255, 0);
+font-size: 1em;
+text-align: center;
+padding: 0.5em 2em;
+border: 2px solid grey;
+color: grey
+}
+
+label:hover {
+cursor: pointer;
+}
+
+input#radioYes:checked+label {
+background-color: grey;
+color: white;
+}
+
+input#radioNo:checked+label {
+background-color: grey;
+color: white;
 }
