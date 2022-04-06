@@ -69,12 +69,12 @@
                 else { ?>
                     <h1>Sign In</h1>
                     <form action="includes/login.inc.php" method="post">
-                        <i class="fa fa-user" id="user-icon"></i>
                         <input type="text" name="uName" placeholder="Username">
-                        <i class="fa fa-lock" id="pwd-icon"></i>
                         <input type="password" name="pwd" placeholder="Password">
                         <button class="float" type="submit" name="submit">Login</button><br>
                         <p><a href="register.php">No account? Register now</a></p>
+                        <i class="fa fa-user" id="user-icon"></i>
+                        <i class="fa fa-lock" id="pwd-icon"></i>
                     </form>
                     <?php
                         if (isset($_GET["error"])) {

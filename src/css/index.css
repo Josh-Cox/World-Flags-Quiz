@@ -11,8 +11,8 @@ body {
 
 .main {
     padding-top: 1px;
-    width: 230px;
-    height: 250px;
+    max-width: 230px;
+    min-height: 250px;
     margin-top: 150px;
     margin-right: auto;
     margin-left: auto;
@@ -51,16 +51,16 @@ button:hover {
     transform: translateY(-3px);
 }
 
+form {
+    display: grid;
+    place-items: center;
+}
+
 input {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 10px;
+    padding-left: 25px;
     font-size: 15px;
     color: rgb(255, 255, 255, 0.5);
-    height: 20px;
     background-color: rgb(255, 255, 255, 0);
     outline: none;
     border-left: none;
@@ -77,18 +77,16 @@ input[name=uName] {
 }
 
 .main i {
-    position: absolute;
+    position: relative;
     color: rgb(255, 255, 255, 0.2);
 }
 
 #user-icon {
-    top: 33.6%;
-    left: 44.2%;
+    transform: translate(-775%, -1120%);
 }
 
 #pwd-icon {
-    top: 38.2%;
-    left: 44.25%;
+    transform: translate(-950%, -970%);
 }
 
 a {
