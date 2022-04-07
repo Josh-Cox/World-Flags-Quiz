@@ -71,7 +71,7 @@
                     <form action="includes/login.inc.php" method="post">
                         <input type="text" name="uName" placeholder="Username">
                         <input type="password" name="pwd" placeholder="Password">
-                        <button class="float" type="submit" name="submit">Login</button><br>
+                        <button class="float" type="submit" name="submit">Login</button>
                         <p><a href="register.php">No account? Register now</a></p>
                         <i class="fa fa-user" id="user-icon"></i>
                         <i class="fa fa-lock" id="pwd-icon"></i>
