@@ -22,16 +22,19 @@ body {
 }
 
 .main h1 {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 10px;
     color: rgb(255, 255, 255, 0.7);
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
-    margin-top: 10px;
-    margin-bottom: 10px;
     text-shadow: 1px 1px 3px #23203b;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
 }
 
 button {
     margin: 0;
+    margin-top: 10px;
     width: 100%;
     height: 100%;
     background: #27AE60;
@@ -56,22 +59,32 @@ button:hover {
 form {
     margin: 0;
     display: grid;
-    place-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: start;
+    row-gap: 30px;
     grid-template-columns: 220px;
     grid-template-rows: 21px 21px 40px 21px 21px 21px;
 }
 
 input {
     margin: 0;
-    width: 100%;
     height: 100%;
     font-size: 15px;
     color: rgb(255, 255, 255, 0.5);
     background-color: rgb(255, 255, 255, 0);
     outline: none;
     border: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+input[name=pwd] {
+    padding-top: 0px;
+}
+
+p {
+    margin: 0;
 }
 
 .main i {
@@ -80,14 +93,17 @@ input {
 }
 
 #user-icon {
-    transform: translate(-775%, -1120%);
+    bottom: 1000%;
+    right: 44%;
 }
 
 #pwd-icon {
-    transform: translate(-950%, -970%);
+    bottom: 1045%;
+    right: 44%;
 }
 
 a {
+    width: 100%;
     color: rgb(255, 255, 255, 0.7);
     text-decoration: none;
 }

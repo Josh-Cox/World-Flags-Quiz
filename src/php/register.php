@@ -16,21 +16,21 @@
             </div>
                 <form action="index.php" method="post">
                     <input type="text" name="fName" placeholder="First Name">
-                    <i class="fa fa-user" id="fName-icon"></i>
                     <input type="text" name="lName" placeholder="Last Name">
-                    <i class="fa fa-user" id="lName-icon"></i>
                     <input type="text" name="uName" placeholder="Username">
-                    <i class="fa fa-user" id="userName-icon"></i>
                     <input type="password" name="pwd" placeholder="Password">
-                    <i class="fa fa-lock" id="pwd-icon"></i>
                     <input type="password" name="cPwd" placeholder="Confirm Password">
-                    <i class="fa fa-lock" id="cPwd-icon"></i>
                     <p>Display Scores</p>
+                    <button type="submit" name="submit" id="signup">Sign Up</button>
                     <input type="radio" id="radioYes" name="display" value="yes" checked>
                     <label for="radioYes" chec>Yes</label>
                     <input type="radio" id="radioNo" name="display" value="no">
                     <label for="radioNo" chec>No</label>
-                    <button type="submit" name="submit" id="signup">Sign Up</button>
+                    <i class="fa fa-user" id="fName-icon"></i>
+                    <i class="fa fa-user" id="lName-icon"></i>
+                    <i class="fa fa-user" id="userName-icon"></i>
+                    <i class="fa fa-lock" id="pwd-icon"></i>
+                    <i class="fa fa-lock" id="cPwd-icon"></i>
                 </form>
 
             <?php
