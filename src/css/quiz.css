@@ -9,14 +9,23 @@ body {
 }
 
 .main {
-    padding-top: 1px;
-    width: 230px;
-    height: 250px;
-    margin-top: 150px;
+    position: relative;
+    text-align: center;
+    width: clamp(400px, 50%, 800px);
+    min-height: 500px;
+    margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
     background-color: rgb(255, 255, 255, 0);
+}
+
+div, h1 {
+    grid-column: span 2;
+}
+
+input, button {
+    grid-row-start: 8;
+    grid-row-end: 8;
 }
 
 .main h1 {
@@ -24,6 +33,48 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
     text-shadow: 1px 1px 3px #23203b;
+}
+
+div.gameBox {
+    margin: 0 auto;
+    height: clamp(200px, 300px, 400px);
+    width: clamp(300px, 50%, 600px);
+    border: 1px solid white;
+}
+
+input {
+    margin: 0;
+    margin-top: 100px;
+    font-size: 15px;
+    color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+button {
+    margin: 0;
+    margin-top: 10px;
+    width: 60px;
+    height: 40%;
+    background: #27AE60;
+    border: none;
+    font-size: 1.0em;
+    font-weight: 300;
+    padding: 0;
+    border-radius: 3px;
+    color: lighten(#27AE60, 40%);
+    border-bottom: 4px solid darken(#27AE60, 10%);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(255, 255, 255, 0.7);
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #2ebb69;
+    transform: translateY(-3px);
 }

@@ -11,9 +11,13 @@
     </head>
     <body>
         <div class="main">
-            <div class="welcome">
-                <h1>Flag Quiz Game Screen</h1>
-            </div>
+            <h1>Flag Quiz</h1>
+            <div class="gameBox"></div>
+            <div class="entryZone">
+                <input type="text" name="answer" placeholder="Enter Country..." id="entryBox">
+                <button class="float" type="submit" name="submit" id="entryButton" onclick="javascript:alert('Hello World!')">Submit</button>
+            </div>  
         </div>
+        <script src="../js/quiz.js" type="text/javasript"></script>
     </body>
 </html>
