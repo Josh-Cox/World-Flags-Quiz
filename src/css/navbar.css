@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
 
+.navbar {
+    margin-top: 50px;
+}
+
 nav {
     text-align: center;
     height: 35px;
     list-style-type: none;
-    width: 800px;
+    width: clamp(400px, 50%, 800px);
     margin: auto;
     border-radius: 100px;
 }

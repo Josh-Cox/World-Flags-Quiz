@@ -59,13 +59,25 @@ button:hover {
 form {
     margin: 0;
     display: grid;
-    justify-content: start;
+    justify-content: center;
     row-gap: 20px;
-    grid-template-columns: 220px 220px;
+    grid-template-columns: 110px 110px;
     grid-template-rows: 21px 21px 21px 21px 21px 21px 40px 40px 21px 21px 21px 21px 21px;
 }
 
+input, i, p, button {
+    grid-column: span 2;
+}
+
+input[value=no] {
+    grid-row-start: 8;
+    grid-row-end: 8;
+}
+
 input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     height: 100%;
     font-size: 15px;
@@ -76,18 +88,7 @@ input {
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 30px;
-    
     border-bottom: 1px solid rgb(255, 255, 255, 0.2);
-}
-
-input, i, p, button {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-input[value=no] {
-    grid-row-start: 8;
-    grid-row-end: 8;
 }
 
 p {
@@ -100,27 +101,30 @@ p {
     color: rgb(255, 255, 255, 0.2);
 }
 
-#user-icon {
-
+#fName-icon {
+    bottom: 1680%;
+    right: 44%;
 }
 
-#pwd-icon {
-
+#lName-icon {
+    bottom: 1680%;
+    right: 44%;
 }
 
 #userName-icon {
-
+    bottom: 1680%;
+    right: 44%;
 }
 
 #pwd-icon {
-
+    bottom: 1680%;
+    right: 44%;
 }
 
 #cPwd-icon {
-
+    bottom: 1680%;
+    right: 44%;
 }
-
-
 
 a {
     color: rgb(255, 255, 255, 0.7);
@@ -152,13 +156,20 @@ background: rgb(255, 255, 255, 0);
 }
 
 label {
-width: 15%;
+width: 25%;
 background: rgb(255, 255, 255, 0);
 font-size: 1em;
-text-align: center;
-padding: 0.5em 2em;
+padding: 10% 30%;
 border: 2px solid grey;
 color: grey
+}
+
+label[for=radioYes] {
+    margin-left: 12.5px;
+}
+
+label[for=radioNo] {
+    margin-left: 12.5px;
 }
 
 label:hover {
