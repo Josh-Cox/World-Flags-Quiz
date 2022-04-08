@@ -98,32 +98,33 @@ p {
 
 .main i {
     position: relative;
+    width: 10%;
     color: rgb(255, 255, 255, 0.2);
 }
 
 #fName-icon {
     bottom: 1680%;
-    right: 44%;
+    left: 2%;
 }
 
 #lName-icon {
     bottom: 1680%;
-    right: 44%;
+    left: 2%;
 }
 
 #userName-icon {
     bottom: 1680%;
-    right: 44%;
+    left: 2%;
 }
 
 #pwd-icon {
     bottom: 1680%;
-    right: 44%;
+    left: 2%;
 }
 
 #cPwd-icon {
     bottom: 1680%;
-    right: 44%;
+    left: 2%;
 }
 
 a {
