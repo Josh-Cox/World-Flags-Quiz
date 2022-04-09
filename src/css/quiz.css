@@ -40,7 +40,7 @@ input, button {
 div.gameBox {
     margin: 0 auto;
     height: clamp(200px, 300px, 400px);
-    width: clamp(300px, 50%, 600px);
+    width: clamp(300px, 550px, 600px);
     border: 1px solid white;
 }
 
@@ -77,4 +77,13 @@ button:hover {
     cursor: pointer;
     background-color: #2ebb69;
     transform: translateY(-3px);
+}
+
+p {
+    color: white;
+}
+
+img {
+    margin-top: 2.5%;
+    height: clamp(200px, 265px, 350px);
 }
