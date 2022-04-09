@@ -37,13 +37,6 @@ input, button {
     text-shadow: 1px 1px 3px #23203b;
 }
 
-div.gameBox {
-    margin: 0 auto;
-    height: clamp(200px, 300px, 400px);
-    width: clamp(300px, 550px, 600px);
-    border: 1px solid white;
-}
-
 input {
     margin: 0;
     margin-top: 100px;
@@ -86,4 +79,5 @@ p {
 img {
     margin-top: 2.5%;
     height: clamp(200px, 265px, 350px);
+    border: 1px solid white;
 }

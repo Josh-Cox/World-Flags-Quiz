@@ -14,9 +14,7 @@
     <body onload="gameStart()">
         <div class="main">
             <h1>Flag Quiz</h1>
-            <div class="gameBox">
-                <img id="flag" src=""></img>
-            </div>
+            <img id="flag" src=""></img>
             <div class="entryZone">
                 <input type="text" name="answer" placeholder="Enter Country..." id="entryBox">
                 <button class="float" id="entryButton" onclick="entrySubmit()">Submit</button>
