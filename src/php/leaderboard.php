@@ -36,7 +36,7 @@
                 <tbody>
                     
                     <?php
-                        $conn = mysqli_connect("localhost", "Valix", "Slowcheetah7rhcp", "quiz", 1111);
+                        $conn = mysqli_connect("localhost", "Valix", "Tortureme8rhcp", "quiz", 1111);
                         $result = mysqli_query($conn, "SELECT Username, Score FROM Scores ORDER BY Score DESC");
                         
                         if (mysqli_num_rows($result)) {

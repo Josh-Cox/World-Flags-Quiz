@@ -119,9 +119,6 @@ function addScore($conn, $userName, $score) {
     mysqli_stmt_bind_param($prepStatement, 'si', $userName, $score);
     mysqli_stmt_execute($prepStatement);
     mysqli_stmt_close($prepStatement);
-
-    header("location: ../src/leaderboard.php?error=None");
-    exit();
 }
 ?>
 

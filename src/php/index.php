@@ -61,8 +61,8 @@
                 if (isset($_SESSION["userName"])) { $Username = $_SESSION["userName"]?>
                     <div class="welcome">
                         <h1>Flag Quiz</h1>
-                        <button onclick="location.href='../php/quiz.php';" type="button" id="play">Play</button><br>
-                        <button onclick="location.href='includes/logout.inc.php';" type="button" id="logout">Logout</button>
+                        <button onclick="location.href='../php/quiz.php';" id="play" type="button">Play</button><br>
+                        <button onclick="location.href='includes/logout.inc.php';" id="logout" type="button">Logout</button>
                     </div>
                     <?php
                 }

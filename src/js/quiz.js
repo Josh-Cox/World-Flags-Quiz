@@ -68,22 +68,86 @@ function test(keydown) {
     }
 }
 
+function skipFlag() {
+    let temp = currentFlags[0];
+    currentFlags.shift();
+    currentFlags.push(temp);
+    displayFlag();
+}
 
 function entrySubmit() {
-    let entryVal = document.getElementById("entryBox").value;
-    let entry = document.getElementById("entryBox");
+    let entryVal = (document.getElementById("entryBox").value).toLowerCase();
+    document.getElementById("entryButton").disabled = true;
 
-    if (entryVal == currentFlags[0]) {
-        score += 1;
-        entry.style.color = "green";
-        setTimeout(() => { entry.style.color = "white"; document.getElementById("entryBox").value = ""; currentFlags.shift(); displayFlag(); }, 1000);
+    switch(currentFlags[0]) {
+
+        case "bosnia and herzegovina":
+            if ((entryVal == currentFlags[0]) || (entryVal == "bosnia")) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+            break;
+
+        case "czech republic":
+            if ((entryVal == currentFlags[0]) || (entryVal == "czechia")) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+            break;
+
+        case "macedonia":
+            if ((entryVal == currentFlags[0]) || (entryVal == "north macedonia")) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+            break;
+        
+        case "the netherlands":
+            if ((entryVal == currentFlags[0]) || (entryVal == "holland") || (entryVal == "netherlands")) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+            break;
+
+        case "uk":
+            if ((entryVal == currentFlags[0]) || (entryVal == "united kingdom") || (entryVal == "the united kingdom") || (entryVal == "the uk")) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+            break;
+
+        default:
+            if (entryVal == currentFlags[0]) {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
     }
-    else {
-        entry.style.color = "red";
-        setTimeout(() => { entry.style.color = "white"; document.getElementById("entryBox").value = ""; }, 1000);
-    }
-    
-   
+}
+
+function correctAnswer() {
+    score += 1;
+    let entry = document.getElementById("entryBox");
+    entry.style.color = "#27AE60";
+    setTimeout(() => { entry.style.color = "white"; document.getElementById("entryBox").value = ""; currentFlags.shift();
+    document.getElementById("entryButton").disabled = false; displayFlag(); }, 1000);
+}
+
+function incorrectAnswer() {
+    let entry = document.getElementById("entryBox");
+    entry.style.color = "red";
+    setTimeout(() => { entry.style.color = "white"; document.getElementById("entryBox").value = ""; document.getElementById("entryButton").disabled = false; }, 1000);
 }
 
 function shuffle(array) {
@@ -106,7 +170,7 @@ function shuffle(array) {
 }
 
 function displayFlag() {
-    if (currentFlags.length) {
+    if (currentFlags.length > 0) {
         document.getElementById("flag").src = "../../img/" + (currentFlags[0] + ".png");
     }
 
@@ -116,6 +180,24 @@ function displayFlag() {
 }
 
 function gameOver() {
-    location.href = "gameOver.php";
+    console.log("POST");
 
+    $.ajax({
+
+        type: "POST",
+        url: "../php/leaderboard.php",
+        dataType: "json",
+        data: {Score: score},
+        success : function(data){
+            if (data.code == "200"){
+                alert("Success: " +data.msg);
+            } else {
+                $(".display-error").html("<ul>"+data.msg+"</ul>");
+                $(".display-error").css("display","block");
+            }
+        },
+        async: true,
+    });
+
+    setTimeout(() => { location.href = "../php/leaderboard.php"; }, 10);
 }
